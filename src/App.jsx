@@ -1,26 +1,46 @@
 
 import {  BrowserRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
+import Hero from './components/Hero';
 import Project from './components/Project';
 import Skill from './components/Skill';
+import { Grid, GridItem } from '@chakra-ui/react';
+import ParticlesBackground from "./components/ParticlesBackground"
+
 function App() {
   
 
   return (
-    <>
+    <div>
+      <ParticlesBackground/>
    <BrowserRouter>
-   
-   <Navbar/>
-   <Home/>
+
+  <Grid templateAreas={`"nav nav" "main main"`} backgroundColor={"#121212"} width={"100%"} >
+
+<GridItem area={"nav"} > <Navbar/>
+
+ </GridItem>
+
+<GridItem    area={"main"} paddingTop={"100px"}>
+
+
+   <Hero/>
+
    <Project/>
-   <Skill/>
+   <Skill/> 
+
+</GridItem>
+
+  </Grid>
    
    </BrowserRouter>
 
     
-    </>
+    </div>
   )
 }
 
 export default App
+
+
+

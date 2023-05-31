@@ -27,8 +27,12 @@ const Navbar = () => {
   };
 
   return (
-    <HStack bg={"#121212"}  className='navbar' width={"1365px"} height={"100px"}>
-      <Flex as="nav" align="center" justify="space-between" padding={4} width="100%">
+    <HStack  pos="fixed"
+    top={0}
+    left={0}
+    right={0} zIndex="sticky"
+    className='navbar' height={"100px"}>
+      <Flex  as="nav" align="center" justify="space-between" padding={4} width="100%">
         <Box display={{ base: 'block', md: 'none'}}>
           <IconButton
             icon={<FiMenu />}
