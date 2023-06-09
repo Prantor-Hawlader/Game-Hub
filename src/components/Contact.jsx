@@ -1,8 +1,9 @@
+import { Box } from "@chakra-ui/react"
 
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <Box id="#contact">Contact</Box>
   )
 }
 

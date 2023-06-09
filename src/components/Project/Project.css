@@ -1,0 +1,32 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card-container {
+  perspective: 50em;
+
+  &:nth-child(1) {
+    --bi: repeating-linear-gradient(30deg, #111 0 0.25em, #333 0 1em);
+  }
+  &:nth-child(2) {
+    --bi: linear-gradient(#555 5em, #0000 3em),
+      linear-gradient(60deg, #880e4f, #1a237e);
+  }
+}
+
+.card {
+  position: relative;
+  width: 450px;
+  height: 300px;
+  transform: rotateY(30deg) rotateX(15deg);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  border: 2px solid #29acff;
+  border-radius: 10px;
+
+  &:hover {
+    transform: rotateY(-30deg) rotateX(-15deg);
+  }
+}

@@ -6,6 +6,7 @@ import Project from './components/Project';
 import Skill from './components/Skill';
 import { Grid, GridItem } from '@chakra-ui/react';
 import ParticlesBackground from "./components/ParticlesBackground"
+import Contact from './components/Contact';
 
 function App() {
   
@@ -28,7 +29,7 @@ function App() {
 
    <Project/>
    <Skill/> 
-
+ <Contact/>
 </GridItem>
 
   </Grid>

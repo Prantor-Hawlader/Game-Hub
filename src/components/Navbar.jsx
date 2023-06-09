@@ -31,7 +31,7 @@ const Navbar = () => {
     top={0}
     left={0}
     right={0} zIndex="sticky"
-    className='navbar' height={"100px"}>
+    className='navbar' height={"100px"} >
       <Flex  as="nav" align="center" justify="space-between" padding={4} width="100%">
         <Box display={{ base: 'block', md: 'none'}}>
           <IconButton
@@ -60,9 +60,9 @@ const Navbar = () => {
             
           >
             <Text color="green.200" marginRight={5} fontWeight={"bold"} fontFamily={"monospace"}
-            fontSize={"20px"} _hover={{borderBottom: "3px solid white", borderBottomRadius:"1px"}}
+            fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
             
-            >&lt;Home/&gt;</Text>
+            > &lt;Home/&gt; </Text>
           </Link>
 
           <Link
@@ -73,7 +73,7 @@ const Navbar = () => {
             
           >
                  <Text color="green.200" marginRight={5} fontWeight={"bold"} fontFamily={"monospace"}
-            fontSize={"20px"} _hover={{borderBottom: "3px solid white", borderBottomRadius:"1px"}}
+            fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
             
             >&lt;Project/&gt;</Text>
           </Link>
@@ -86,30 +86,19 @@ const Navbar = () => {
             
           >
              <Text color="green.200" marginRight={5} fontWeight={"bold"} fontFamily={"monospace"}
-            fontSize={"20px"} _hover={{borderBottom: "3px solid white", borderBottomRadius:"1px"}}
+            fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
             
             >&lt;Skill/&gt;</Text>
           </Link>
 
+ 
           <Link
             
-            to="/about"
-  
-            
-          >
-                   <Text color="green.200" marginRight={5} fontWeight={"bold"} fontFamily={"monospace"}
-            fontSize={"20px"} _hover={{borderBottom: "3px solid white", borderBottomRadius:"1px"}}
-            
-            >&lt;About/&gt;</Text>
-          </Link>
-
-          <Link
-            
-            to="/contact"
+            to="#contact"
 
             
           >        <Text color="green.200" marginRight={5} fontWeight={"bold"} fontFamily={"monospace"}
-          fontSize={"20px"} _hover={{borderBottom: "3px solid white", borderBottomRadius:"1px"}}
+          fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
           
           >&lt;Contact/&gt;</Text>
           </Link>
@@ -121,7 +110,7 @@ const Navbar = () => {
         <DrawerOverlay />
         <DrawerContent bg="#121212" color="white">
           <DrawerCloseButton color="white" />
-          <DrawerBody>
+          <DrawerBody>  
             <Flex direction="column">
               <Link
                 
@@ -159,17 +148,7 @@ const Navbar = () => {
                 Skills
               </Link>
 
-              <Link
-                
-                to="/about"
-                colorScheme="green"
-                variant="ghost"
-                _hover={{ borderBottom: '1px solid white' }}
-                borderColor="white"
-                marginBottom={2}
-              >
-                About
-              </Link>
+              
 
               <Link
                 

@@ -15,15 +15,13 @@ const Hero = () => {
     
   return (
 
+<SimpleGrid id="home"  columns={{ sm: 1, md: 1, lg: 2, xl: 2,  }}   >
 
-
-<SimpleGrid  columns={{ sm: 1, md: 1, lg: 2, xl: 2,  }}   >
-<Box height={"100vh"} ><Design/> </Box>
-
-<Box  paddingTop={"140px"}  >
-  <Text fontWeight={"extrabold"} color={"whiteAlpha.900"} fontSize={"25px"}>Hello </Text>
-<Text color={"green.200"}    fontSize={"25px"} fontWeight={"bold"}  >
-I'm {text}
+<Box ><Design/> </Box>
+<Box  paddingTop={"140px"} paddingLeft={"60px"} >
+  <Text fontWeight={"extrabold"} color={"whiteAlpha.900"} fontSize={"40px"}>Hello </Text>
+<Text color={"green.200"}    fontSize={"35px"} fontWeight={"bold"}  >
+I am {text}
 
 </Text>
 <Text fontSize={"20px"} fontWeight={"semibold"} color={"whiteAlpha.900"}>
@@ -32,9 +30,8 @@ I am a full stack web developer and
 I love how collaboration and knowledge
 sharing happened through open-source.
 </Text>
-
-
 </Box>
+
 </SimpleGrid>
   )
 }
