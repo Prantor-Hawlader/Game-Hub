@@ -5,15 +5,15 @@ import Hero from './components/Hero';
 import Project from './components/Project';
 import Skill from './components/Skill';
 import { Grid, GridItem } from '@chakra-ui/react';
-import ParticlesBackground from "./components/ParticlesBackground"
 import Contact from './components/Contact';
+import PreLoader from './components/Preloader';
 
 function App() {
   
 
   return (
     <div>
-      <ParticlesBackground/>
+      <PreLoader/>
    <BrowserRouter>
 
   <Grid templateAreas={`"nav nav" "main main"`} backgroundColor={"#121212"} width={"100%"} >

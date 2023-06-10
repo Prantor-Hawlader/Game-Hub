@@ -31,8 +31,8 @@ const Navbar = () => {
     top={0}
     left={0}
     right={0} zIndex="sticky"
-    className='navbar' height={"100px"} >
-      <Flex  as="nav" align="center" justify="space-between" padding={4} width="100%">
+     height={"100px"} width="100%" justify="space-between" padding={3} >
+   
         <Box display={{ base: 'block', md: 'none'}}>
           <IconButton
             icon={<FiMenu />}
@@ -103,7 +103,6 @@ const Navbar = () => {
           >&lt;Contact/&gt;</Text>
           </Link>
         </Flex>
-      </Flex>
 
       {/* Mobile Navigation Drawer */}
       <Drawer placement="left" onClose={closeMobileNav} isOpen={isMobileNavOpen}>
