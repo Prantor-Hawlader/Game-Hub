@@ -27,10 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <HStack  pos="fixed"
-    top={0}
-    left={0}
-    right={0} zIndex="sticky"
+    <HStack  
      height={"100px"} width="100%" justify="space-between" padding={3} >
    
         <Box display={{ base: 'block', md: 'none'}}>

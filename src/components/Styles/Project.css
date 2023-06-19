@@ -1,9 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Lobster&family=Tiro+Kannada&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Lobster&family=Tiro+Kannada&display=swap");
 * {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 }
 
+.header {
+  font-family: "BIZ UDMincho", serif;
+  font-family: "Lobster", cursive;
+  font-family: "Tiro Kannada", serif;
+}
+.gradient-text {
+  font-family: "Tiro Kannada", serif;
+  background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 15s infinite linear;
+}
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+.text {
+  font-family: "BIZ UDMincho", serif;
+}
 .card-container {
   perspective: 50em;
 
@@ -25,6 +51,7 @@
   transition: transform 1s;
   border: 2px solid #29acff;
   border-radius: 10px;
+  box-shadow: 0px 10px 100px rgb(54, 240, 231);
 
   &:hover {
     transform: rotateY(-30deg) rotateX(-15deg);
