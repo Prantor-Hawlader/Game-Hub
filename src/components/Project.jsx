@@ -1,17 +1,23 @@
-import { SimpleGrid ,Box,Text,Button, Image, Heading} from "@chakra-ui/react"
+import { SimpleGrid ,AbsoluteCenter,Box,Text,Button, Image, Heading, Divider} from "@chakra-ui/react"
 import "./Styles/Project.css"
 import Project1 from "../assets/game_hub.png"
 const Project = () => {
   return (
 <>
-
-<Text  fontSize={"6xl"}
+<Box position='relative' padding='10' marginTop={"6rem"}>
+  <Divider />
+  <AbsoluteCenter  px='4'>
+  <Text  fontSize={"6xl"}
         fontFamily={"cursive"}
         fontWeight={"extrabold"}
         paddingTop={"10px"}
         bgGradient="linear(to-l, #29acff, green.200)"
-        bgClip={"text"} marginTop={"200px"} textAlign={"center"}>My Projects  </Text>
-<SimpleGrid marginTop={"100px"} id="project"   columns={{ sm: 1, md: 1, lg: 2, xl: 2,  }}   >
+        bgClip={"text"}  textAlign={"center"} >My Projects  </Text>
+  </AbsoluteCenter>
+</Box>
+
+
+<SimpleGrid marginTop={"6rem"} id="project"   columns={{ sm: 1, md: 1, lg: 2, xl: 2,  }}   >
   <Box>
 
   <div className="card-container">
