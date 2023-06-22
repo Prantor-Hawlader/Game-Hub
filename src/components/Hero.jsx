@@ -1,7 +1,7 @@
-import { Box, SimpleGrid, Text } from "@chakra-ui/react"
+import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react"
 import { useTypewriter ,Cursor} from "react-simple-typewriter"
-import Design from "./Design"
-
+import React_Logo from "../assets/react-js-logo.png"
+import Web_Template from "../assets/web-template.png"
 const Hero = () => {
 
 
@@ -15,10 +15,10 @@ const Hero = () => {
     
   return (
 
-<SimpleGrid id="home"  columns={{ sm: 1, md: 1, lg: 2, xl: 2,  }}   >
+<SimpleGrid id="home"  columns={{ sm: 1, md: 1, lg: 2, xl: 2,  }} marginX={"9rem"}   >
 
-<Box marginTop={"100px"} marginLeft={"75px"}  >
-  <Text className="header" fontWeight={"extrabold"} color={"green.200"} fontSize={"40px"}>Hello </Text>
+<Box marginTop={"6rem"}    >
+  <Text className="header" fontWeight={"extrabold"} color={"whiteAlpha.900"} fontSize={"40px"}>Hello </Text>
 <Text className="gradient-text" color={"green.200"} marginBottom={"15px"}    fontSize={"35px"} fontWeight={"bold"}  >
 I am {text}<Cursor/> 
 
@@ -29,6 +29,11 @@ I am a full stack web developer and
 I love how collaboration and knowledge
 sharing happened through open-source.
 </Text>
+</Box>
+
+<Box marginTop={"3rem"} >
+
+<Image  src={Web_Template} boxSize={"300px"}  />
 </Box>
 {/* <Box height={"100wh"}><Design/> </Box> */}
 

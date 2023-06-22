@@ -2,7 +2,6 @@ import {
   Container,
   Flex,
   Box,
-  Heading,
   Text,
   IconButton,
   Button,
@@ -16,6 +15,8 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
+  Divider,
+  AbsoluteCenter
 } from '@chakra-ui/react';
 import {
   MdPhone,
@@ -32,6 +33,22 @@ const Contact = () => {
     e.preventDefault()
   }
   return (
+    <>
+        
+    
+    
+        
+    <Box position='relative' padding='10' marginTop={"6rem"}>
+  <Divider />
+  <AbsoluteCenter  px='4'>
+  <Text  fontSize={"6xl"}
+        fontFamily={"cursive"}
+        fontWeight={"extrabold"}
+        paddingTop={"10px"}
+        bgGradient="linear(to-l, #29acff, green.200)"
+        bgClip={"text"}  textAlign={"center"} >Contact Me  </Text>
+  </AbsoluteCenter>
+</Box>
     <Container  maxW="full" mt={0} centerContent overflow="hidden">
       <Flex>
         <Box
@@ -44,44 +61,40 @@ const Contact = () => {
             <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
               <WrapItem>
                 <Box >
-                  <Heading color={"#29acff"}>Contact</Heading>
-                  <Text mt={{ sm: 3, md: 3, lg: 5 }} >
-                    Fill up the form below to contact
-                  </Text>
+               
                   <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                    <VStack pl={0} spacing={3} alignItems="flex-start">
-                      <Button
+                    <VStack pl={7} spacing={3} alignItems="flex-start">
+                      <Text
                         
                         size="md"
                         height="48px"
                         width="200px"
-                        variant="ghost"
                         color="#DCE2FF"
-                        _hover={{ border: '2px solid #1C6FEB' }}
+                       
                         leftIcon={<MdPhone size="20px" />}>
                         +8801799037182
-                      </Button>
-                      <Button
+                      </Text>
+                      <Text
 
                         size="md"
                         height="48px"
                         width="200px"
                         variant="ghost"
                         color="#DCE2FF"
-                        _hover={{ border: '2px solid #1C6FEB' }}
+                      
                         leftIcon={<MdEmail  size="20px" />}>
                         prantor502@gmail.com
-                      </Button>
-                      <Button
+                      </Text>
+                      <Text
                         size="md"
                         height="48px"
                         width="200px"
                         variant="ghost"
                         color="#DCE2FF"
-                        _hover={{ border: '2px solid #1C6FEB' }}
+                        
                         leftIcon={<MdLocationOn  size="20px" />}>
                         Dhaka, Bangladesh
-                      </Button>
+                      </Text>
                     </VStack>
                   </Box>
                   <HStack
@@ -154,10 +167,9 @@ const Contact = () => {
                         <Button
                           marginTop={"10px"}
                           type= "submit"
-                          variant="solid"
-                          bg="green.200"
-                          color="white"
-                          _hover={{bg: "green.500"}}>
+                           bg={"#121212"}
+                           color={"whiteAlpha.900"}
+                          _hover={{bgGradient:"linear(to-l, #29acff, green.200)",color:"#121212"} } >
                           Send Message
                         </Button>
                       </FormControl>
@@ -173,6 +185,12 @@ const Contact = () => {
         </Box>
       </Flex>
     </Container>
+    <Text className='text' pt={3} fontSize={'md'} textAlign={'center'}>
+          © 2023 All rights reserved to Prantor Hawlader.
+        </Text>
+    
+    </>
+
   );
 
 }
