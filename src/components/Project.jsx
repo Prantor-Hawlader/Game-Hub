@@ -6,7 +6,7 @@ import Web_Template from "../assets/web-template.png"
 const Project = () => {
   return (
 <>
-<Box position='relative' padding='10' marginTop={"15rem"}>
+<Box position='relative' padding='10' marginTop={"15rem"} id="project">
   <Divider />
   <AbsoluteCenter  px='4'>
   <Text  fontSize={"6xl"}
@@ -20,14 +20,14 @@ const Project = () => {
 </Box>
 
 
-<SimpleGrid marginTop={"12rem"} id="project"   columns={{ sm: 1, md: 1, lg: 2, xl: 2,  }}   >
-  <Box>
+<SimpleGrid marginX={"5rem"} marginTop={"12rem"}  columns={{ sm: 1, md: 1, lg: 2, xl: 2,  }}   >
+  <Box marginBottom={"5rem"}   >
 
   <div className="card-container">
-    <div className="card">
-    <Image src={Project1}  height={"full"}/>
+    <Box className="card" >
+    <Image src={Project1}  height="full"/>
         
-    </div> 
+    </Box> 
   </div>
   
   </Box>
@@ -37,11 +37,11 @@ const Project = () => {
 <Heading bgGradient="linear(to-l, #29acff, green.200)" bgClip={"text"}>
   Game Hub
 </Heading>
-<Text className="text" marginTop={"25px"} fontSize={"20px"} >
+<Text className="text" marginTop={"1.5rem"} fontSize={"20px"} >
 This is a fun project where different genres of games have been sorted.I built this website using React,Typescript,React Query and Zustand for state management.
   
 </Text>
-<Button _hover={{bgGradient:"linear(to-l, #29acff, green.200)"}} as={"a"} target="_blank" marginTop={"20px"} href="https://prantor-gamer-world.vercel.app/" > Let&apos;s Visit </Button>
+<Button _hover={{bgGradient:"linear(to-l, #29acff, green.200)"}} as={"a"} target="_blank" marginTop={"2rem"} href="https://prantor-gamer-world.vercel.app/" > Let&apos;s Visit </Button>
 
 </Box>
 

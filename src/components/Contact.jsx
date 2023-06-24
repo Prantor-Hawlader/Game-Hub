@@ -25,12 +25,26 @@ import {
   MdFacebook,
   MdOutlineEmail,
 } from 'react-icons/md';
-import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsPerson } from 'react-icons/bs';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 
 const Contact = () => {
+
+  const ref = useRef();
+  const [success,setSuccess]= useState(false);
   const handleSubmit = (e) => {
     e.preventDefault()
+    emailjs.sendForm('service_dcnq78i', 'template_o0p3bph', ref.current, 'ARxoRUFtF4_hYyAKZ')
+  .then((result) => {
+      console.log(result.text);
+      setSuccess(true)
+  }, (error) => {
+      console.log(error.text);
+      setSuccess(false)
+
+  });
   }
   return (
     <>
@@ -38,7 +52,7 @@ const Contact = () => {
     
     
         
-    <Box position='relative' padding='10' marginTop={"6rem"}>
+    <Box position='relative' padding='10' marginTop={"6rem"} id='contact'>
   <Divider />
   <AbsoluteCenter  px='4'>
   <Text  fontSize={"6xl"}
@@ -65,7 +79,7 @@ const Contact = () => {
                   <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                     <VStack pl={7} spacing={3} alignItems="flex-start">
                       <Text
-                        
+                        className='text'
                         size="md"
                         height="48px"
                         width="200px"
@@ -75,7 +89,8 @@ const Contact = () => {
                         +8801799037182
                       </Text>
                       <Text
-
+                        className='text'
+                        
                         size="md"
                         height="48px"
                         width="200px"
@@ -86,6 +101,8 @@ const Contact = () => {
                         prantor502@gmail.com
                       </Text>
                       <Text
+                        className='text'
+                      
                         size="md"
                         height="48px"
                         width="200px"
@@ -103,6 +120,9 @@ const Contact = () => {
                     px={5}
                     alignItems="flex-start">
                     <IconButton
+                           as={"a"}
+                           href='https://www.facebook.com/prantor.azijul/'
+                           target='_blank'
                       aria-label="facebook"
                       variant="ghost"
                       size="lg"
@@ -111,6 +131,9 @@ const Contact = () => {
                       icon={<MdFacebook size="28px" />}
                     />
                     <IconButton
+                        as={"a"}
+                        href='https://github.com/Prantor-Hawlader'
+                        target='_blank'
                       aria-label="github"
                       variant="ghost"
                       size="lg"
@@ -119,12 +142,15 @@ const Contact = () => {
                       icon={<BsGithub size="28px" />}
                     />
                     <IconButton
-                      aria-label="discord"
+                        as={"a"}
+                        href='https://www.linkedin.com/in/prantor-hawlader-04937b1b3/'
+                        target='_blank'
+                      aria-label="linkedin"
                       variant="ghost"
                       size="lg"
                       isRound={true}
                       _hover={{ bg: '#29acff' }}
-                      icon={<BsDiscord size="28px" />}
+                      icon={<BsLinkedin size="28px" />}
                     />
                   </HStack>
                 </Box>
@@ -133,7 +159,7 @@ const Contact = () => {
                 <Box bg="white" borderRadius="lg">
                   <Box m={8} color="#0B0E3F">
                     <VStack spacing={5}>
-                   <form onSubmit={handleSubmit}>
+                   <form ref={ref} onSubmit={handleSubmit}>
                    <FormControl id="name">
                         <FormLabel>Your Name</FormLabel>
                         <InputGroup borderColor="green.200">
@@ -141,7 +167,7 @@ const Contact = () => {
                             pointerEvents="none"
                             children={<BsPerson color="gray.800" />}
                           />
-                          <Input type="text" size="md" />
+                          <Input type="text" size="md" name='name'/>
                         </InputGroup>
                       </FormControl>
                       <FormControl id="name">
@@ -151,27 +177,31 @@ const Contact = () => {
                             pointerEvents="none"
                             children={<MdOutlineEmail color="gray.800" />}
                           />
-                          <Input type="text" size="md" />
+                          <Input type="text" size="md" name='email' />
                         </InputGroup>
                       </FormControl>
-                      <FormControl id="name">
+                      <FormControl id="name" >
                         <FormLabel>Message</FormLabel>
                         <Textarea
-                          
+                          name='message'
                           borderColor="green.200"
                           onClick={{borderColor: "red"}}                          
                           placeholder="message"
                         />
                       </FormControl>
                       <FormControl id="name" float="right">
-                        <Button
+                     {success ?    <Button
                           marginTop={"10px"}
                           type= "submit"
                            bg={"#121212"}
                            color={"whiteAlpha.900"}
                           _hover={{bgGradient:"linear(to-l, #29acff, green.200)",color:"#121212"} } >
-                          Send Message
-                        </Button>
+                          Successfully message has sent
+                        </Button> : <Button   marginTop={"10px"}
+                          type= "submit"
+                           bg={"#121212"}
+                           color={"whiteAlpha.900"}
+                          _hover={{bgGradient:"linear(to-l, #29acff, green.200)",color:"#121212"} } >Send Message</Button>} 
                       </FormControl>
 
 

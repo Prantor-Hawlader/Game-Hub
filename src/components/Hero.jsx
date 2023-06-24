@@ -1,7 +1,6 @@
 import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react"
 import { useTypewriter ,Cursor} from "react-simple-typewriter"
-import React_Logo from "../assets/react-js-logo.png"
-import Web_Template from "../assets/web-template.png"
+import Api_Logo from "../assets/apiLook.png"
 const Hero = () => {
 
 
@@ -15,7 +14,7 @@ const Hero = () => {
     
   return (
 
-<SimpleGrid id="home"  columns={{ sm: 1, md: 1, lg: 2, xl: 2,  }} marginX={"9rem"}   >
+<SimpleGrid id="home"  columns={{ sm: 1, md: 1, lg: 2, xl: 2,  }} marginX={"9rem"}>
 
 <Box marginTop={"6rem"}    >
   <Text className="header" fontWeight={"extrabold"} color={"whiteAlpha.900"} fontSize={"40px"}>Hello </Text>
@@ -31,9 +30,10 @@ sharing happened through open-source.
 </Text>
 </Box>
 
-<Box marginTop={"3rem"} >
+<Box marginTop={"2rem"}  >
 
-<Image  src={Web_Template} boxSize={"300px"}  />
+<Image  src={Api_Logo}   /> 
+
 </Box>
 {/* <Box height={"100wh"}><Design/> </Box> */}
 

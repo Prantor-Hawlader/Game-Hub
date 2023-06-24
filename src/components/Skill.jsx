@@ -29,7 +29,7 @@ const Skill = () => {
 `;
   return (
    <>
-    <Box marginTop={"10rem"} position='relative' padding='10'>
+    <Box marginTop={"10rem"} position='relative' padding='10' id="skill">
     <Divider />
 
     <AbsoluteCenter>

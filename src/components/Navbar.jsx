@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 import  { useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import {
@@ -28,9 +35,9 @@ const Navbar = () => {
 
   return (
     <HStack  
-     height={"100px"} width="100%" justify="space-between" padding={3} >
+      height={"5rem"} justify="space-between" padding={3} >
    
-        <Box display={{ base: 'block', md: 'none'}}>
+        <Flex display={{ base: 'block', md: 'none'}}  >
           <IconButton
             icon={<FiMenu />}
             variant="ghost"
@@ -39,21 +46,22 @@ const Navbar = () => {
             onClick={toggleMobileNav}
             
           />
-        </Box>
+
+        </Flex>
 
         
 
 
 <Link to={"/"}> 
 
-<Image src={Prantor_Logo} boxSize={"300px"} paddingTop={"40px"} />
+<Box paddingRight={"26rem"}> <Image src={Prantor_Logo} boxSize={"300px"} paddingTop={"40px"} /></Box>
 
  </Link>
-        <Flex  justifyContent={"space-between"} display={{ base: 'none', md: 'flex' }}>
+        <Flex   justifyContent={"space-between"} display={{ base: 'none', md: 'flex' }}>
           <Link
             
             to="#home"
-           smooth
+           
             
           >
             <Text color="green.200" marginRight={5} fontWeight={"bold"} fontFamily={"monospace"}
@@ -92,6 +100,7 @@ const Navbar = () => {
           <Link
             
             to="#contact"
+            smooth
 
             
           >        <Text color="green.200" marginRight={5} fontWeight={"bold"} fontFamily={"monospace"}
@@ -103,26 +112,29 @@ const Navbar = () => {
 
       {/* Mobile Navigation Drawer */}
       <Drawer placement="left" onClose={closeMobileNav} isOpen={isMobileNavOpen}>
+   
         <DrawerOverlay />
         <DrawerContent bg="#121212" color="white">
           <DrawerCloseButton color="white" />
           <DrawerBody>  
+ 
             <Flex direction="column">
               <Link
                 
-                to="/home"
+                to="#home"
                 colorScheme="green"
                 variant="ghost"
                 _hover={{ borderBottom: '1px solid white' }}
                 borderColor="white"
                 marginBottom={2}
+                
               >
                 Home
               </Link>
 
               <Link
                 
-                to="/projects"
+                to="#projects"
                 colorScheme="green"
                 variant="ghost"
                 _hover={{ borderBottom: '1px solid white' }}
@@ -134,7 +146,7 @@ const Navbar = () => {
 
               <Link
                 
-                to="/skills"
+                to="#skills"
                 colorScheme="green"
                 variant="ghost"
                 _hover={{ borderBottom: '1px solid white' }}
@@ -148,7 +160,7 @@ const Navbar = () => {
 
               <Link
                 
-                to="/contact"
+                to="#contact"
                 colorScheme="green"
                 variant="ghost"
                 _hover={{ borderBottom: '1px solid white' }}
