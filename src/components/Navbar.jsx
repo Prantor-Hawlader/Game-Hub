@@ -1,10 +1,6 @@
 
 
 
-
-
-
-
 import  { useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import {
@@ -37,24 +33,24 @@ const Navbar = () => {
     <HStack  
       height={"5rem"} justify="space-between" padding={3} >
    
-        <Flex display={{ base: 'block', md: 'none'}}  >
+        <Box display={{ base: 'block', md: 'none'}}  >
           <IconButton
             icon={<FiMenu />}
             variant="ghost"
-            aria-label="Menu"
+            aria-label="Menu"cv
             color="white"
             onClick={toggleMobileNav}
             
           />
 
-        </Flex>
+        </Box>
 
         
 
 
 <Link to={"/"}> 
 
-<Box paddingRight={"26rem"}> <Image src={Prantor_Logo} boxSize={"300px"} paddingTop={"40px"} /></Box>
+<Box > <Image src={Prantor_Logo}  paddingTop="3rem" boxSize={"330px"} /></Box>
 
  </Link>
         <Flex   justifyContent={"space-between"} display={{ base: 'none', md: 'flex' }}>
@@ -119,56 +115,56 @@ const Navbar = () => {
           <DrawerBody>  
  
             <Flex direction="column">
-              <Link
-                
-                to="#home"
-                colorScheme="green"
-                variant="ghost"
-                _hover={{ borderBottom: '1px solid white' }}
-                borderColor="white"
-                marginBottom={2}
-                
-              >
-                Home
-              </Link>
+            <Link
+            
+            to="#home"
+           
+            
+          >
+            <Text color="green.200" paddingTop={"1rem"} fontWeight={"bold"} fontFamily={"monospace"}
+            fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
+            
+            > &lt;Home/&gt; </Text>
+          </Link>
 
-              <Link
-                
-                to="#projects"
-                colorScheme="green"
-                variant="ghost"
-                _hover={{ borderBottom: '1px solid white' }}
-                borderColor="white"
-                marginBottom={2}
-              >
-                Projects
-              </Link>
+          <Link
+            
+            to="#project"
+           smooth
+            
+            
+          >
+                 <Text color="green.200" paddingTop={"1rem"} fontWeight={"bold"} fontFamily={"monospace"}
+            fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
+            
+            >&lt;Project/&gt;</Text>
+          </Link>
 
-              <Link
-                
-                to="#skills"
-                colorScheme="green"
-                variant="ghost"
-                _hover={{ borderBottom: '1px solid white' }}
-                borderColor="white"
-                marginBottom={2}
-              >
-                Skills
-              </Link>
+          <Link
+            
+            to="#skill"
+            smooth
+            
+            
+          >
+             <Text color="green.200" paddingTop={"1rem"} fontWeight={"bold"} fontFamily={"monospace"}
+            fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
+            
+            >&lt;Skill/&gt;</Text>
+          </Link>
 
-              
+ 
+          <Link
+            
+            to="#contact"
+            smooth
 
-              <Link
-                
-                to="#contact"
-                colorScheme="green"
-                variant="ghost"
-                _hover={{ borderBottom: '1px solid white' }}
-                borderColor="white"
-                marginBottom={2}
-              >
-                Contact
-              </Link>
+            
+          >        <Text color="green.200" paddingTop={"1rem"} fontWeight={"bold"} fontFamily={"monospace"}
+          fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
+          
+          >&lt;Contact/&gt;</Text>
+          </Link>
             </Flex>
           </DrawerBody>
         </DrawerContent>

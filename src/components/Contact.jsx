@@ -26,7 +26,7 @@ import {
   MdOutlineEmail,
 } from 'react-icons/md';
 import { BsGithub, BsLinkedin, BsPerson } from 'react-icons/bs';
-import React, { useRef, useState } from 'react';
+import  { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 
@@ -63,8 +63,8 @@ const Contact = () => {
         bgClip={"text"}  textAlign={"center"} >Contact Me  </Text>
   </AbsoluteCenter>
 </Box>
-    <Container  maxW="full" mt={0} centerContent overflow="hidden">
-      <Flex>
+    <Container  maxW="full" mt={0} centerContent overflow="hidden" marginTop={"5rem"}>
+      <Flex align={"center"} justifyContent={"center"}  > 
         <Box
           
           color="white"

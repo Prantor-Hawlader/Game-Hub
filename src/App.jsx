@@ -8,6 +8,7 @@ import { Grid, GridItem } from '@chakra-ui/react';
 import Contact from './components/Contact';
 import PreLoader from './components/Preloader';
 
+
 function App() {
   
 
@@ -16,13 +17,13 @@ function App() {
       <PreLoader/>
    <BrowserRouter>
 
-  <Grid templateAreas={`"nav nav" "main main"`} backgroundColor={"#121212"} width={"100%"} >
+  <Grid templateAreas={`"nav nav" "main main"`} backgroundColor={"#121212"}  >
 
-<GridItem area={"nav"} > <Navbar/>
+<GridItem area={"nav"} width={"100%"}> <Navbar/>
 
  </GridItem>
 
-<GridItem    area={"main"} paddingTop={"100px"}>
+<GridItem    area={"main"} paddingTop={"100px"} width={"100%"} mx={"auto"}>
 
 
    <Hero/>

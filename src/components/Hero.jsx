@@ -14,7 +14,7 @@ const Hero = () => {
     
   return (
 
-<SimpleGrid id="home"  columns={{ sm: 1, md: 1, lg: 2, xl: 2,  }} marginX={"9rem"}>
+<SimpleGrid id="home"  columns={{ sm: 1, md: 1, lg: 2, xl: 2,  }} mx={"9rem"}>
 
 <Box marginTop={"6rem"}    >
   <Text className="header" fontWeight={"extrabold"} color={"whiteAlpha.900"} fontSize={"40px"}>Hello </Text>
