@@ -1,9 +1,11 @@
-import { SimpleGrid ,AbsoluteCenter,Box,Text,Button, Image, Heading, Divider} from "@chakra-ui/react"
+import { Flex ,AbsoluteCenter,Box,Text,Button, Image, Heading, Divider} from "@chakra-ui/react"
 import "./Styles/Project.css"
-import Project1 from "../assets/game_hub.png"
 import Web_Template from "../assets/web-template.png"
+import items from "./ProjectList"
 
 const Project = () => {
+
+
   return (
 <>
 <Box position='relative' padding='10' marginTop={"15rem"} id="project">
@@ -20,32 +22,47 @@ const Project = () => {
 </Box>
 
 
-<SimpleGrid marginX={"5rem"} marginTop={"12rem"}  columns={{ sm: 1, md: 1, lg: 2, xl: 2,  }}   >
-  <Box marginBottom={"5rem"}   >
-
-  <div className="card-container">
-    <Box className="card" >
-    <Image src={Project1}  height="full"/>
-        
-    </Box> 
-  </div>
   
-  </Box>
+  {items.map((item,index)=> (
+<Flex marginX={"5rem"} marginTop={"10rem"} 
+      css={{
+        "&:nth-child(2n + 1)": {
+          flexDirection: "row-reverse",
+        },
+      }}  key={index}   >
 
-<Box>
+<Box marginBottom={"3rem"}   >
 
-<Heading bgGradient="linear(to-l, #29acff, green.200)" bgClip={"text"}>
-  Game Hub
-</Heading>
-<Text className="text" marginTop={"1.5rem"} fontSize={"20px"} >
-This is a fun project where different genres of games have been sorted.I built this website using React,Typescript,React Query and Zustand for state management.
-  
-</Text>
-<Button _hover={{bgGradient:"linear(to-l, #29acff, green.200)"}} as={"a"} target="_blank" marginTop={"2rem"} href="https://prantor-gamer-world.vercel.app/" > Let&apos;s Visit </Button>
+<div className="card-container">
+  <Box className="card" >
+  <Image src={item.img}  height="full"  width={"full"}/>
+      
+  </Box> 
+</div>
 
 </Box>
 
-   </SimpleGrid>
+<Box marginX={"4rem"}>
+<Box  data-aos="fade-right"  data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" >
+<Heading  bgGradient="linear(to-l, #29acff, green.200)" bgClip={"text"}>
+{item.title}
+</Heading>
+<Text className="text" marginTop={"1.5rem"} fontSize={"20px"} >
+{item.details}
+
+</Text>
+</Box>
+
+<Button  data-aos="flip-down"  data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"  _hover={{bgGradient:"linear(to-l, #29acff, green.200)"}} as={"a"} target="_blank" marginTop={"2rem"} href={item.link} > Let&apos;s Visit </Button>
+
+</Box>
+
+   </Flex>
+    
+  ))}
+
 
 
 </>

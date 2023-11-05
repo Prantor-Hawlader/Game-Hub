@@ -1,19 +1,26 @@
-import { useEffect } from "react";
-import { preLoaderAnim } from "../Animations";
+import {Text} from "@chakra-ui/react"
 import "./Styles/Preloader.css";
 
 const PreLoader = () => {
-  useEffect(() => {
-    preLoaderAnim();
-  }, []);
+  // useEffect(() => {
+  //   preLoaderAnim();
+  // }, [])
   return (
-    <div className="preloader">
-      <div className="texts-container">
-        <span>Developer,</span>
-        <span>Curator,</span>
-        <span>Vibes.</span>
-      </div>
+    <div className="container">
+      <div className="psoload">
+    <div className="straight"></div>
+    <div className="curve"></div>
+  
+    <div className="center"></div>
+    <div className="inner"><Text className="name" fontSize={"6xl"}
+        fontFamily={"cursive"}
+        fontWeight={"extrabold"}
+        
+          bgGradient="linear(to-l, #29acff, green.200)"
+        bgClip={"text"}> P </Text></div>
     </div>
+    </div>
+  
   );
 };
 

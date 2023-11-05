@@ -1,8 +1,5 @@
-
-
-
-import  { useState } from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { useState } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import {
   Box,
   Flex,
@@ -15,9 +12,16 @@ import {
   HStack,
   Text,
   Image,
-} from '@chakra-ui/react';
-import {FiMenu} from "react-icons/fi"
-import Prantor_Logo from "../assets/Logos.png"
+  keyframes,
+} from "@chakra-ui/react";
+import { FiMenu } from "react-icons/fi";
+import Prantor_Logo from "../assets/Logos.png";
+const spin = keyframes`  
+0% {
+  background-position-x: 390px;
+  
+} 
+`;
 const Navbar = () => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
 
@@ -29,142 +33,90 @@ const Navbar = () => {
     setMobileNavOpen(false);
   };
 
+  const spinAnimation = `${spin} infinite 1s linear`;
+  const menus = [
+    { id: 1,location : "#home", name: "<Home/>" },
+    { id: 2,location : "#project", name: "<Project/>" },
+    { id: 3,location : "#skill", name: "<Skills/>" },
+    { id: 4, location : "#contact",name: "<Contact/>" },
+  ];
+
   return (
-    <HStack  
-      height={"5rem"} justify="space-between" padding={3} >
-   
-        <Box display={{ base: 'block', md: 'none'}}  >
-          <IconButton
-            icon={<FiMenu />}
-            variant="ghost"
-            aria-label="Menu"cv
-            color="white"
-            onClick={toggleMobileNav}
-            
-          />
+    <HStack height={"5rem"} justify="space-between" padding={3}>
+      <Box display={{ base: "block", md: "none" }}>
+        <IconButton
+          icon={<FiMenu />}
+          variant="ghost"
+          aria-label="Menu"
+          cv
+          color="white"
+          onClick={toggleMobileNav}
+        />
+      </Box>
 
-        </Box>
-
+      <Link to={"/"}>
+        <Box>
         
-
-
-<Link to={"/"}> 
-
-<Box > <Image src={Prantor_Logo}  paddingTop="3rem" boxSize={"330px"} /></Box>
-
- </Link>
-        <Flex   justifyContent={"space-between"} display={{ base: 'none', md: 'flex' }}>
-          <Link
-            
-            to="#home"
-           
-            
-          >
-            <Text color="green.200" marginRight={5} fontWeight={"bold"} fontFamily={"monospace"}
-            fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
-            
-            > &lt;Home/&gt; </Text>
-          </Link>
-
-          <Link
-            
-            to="#project"
-           smooth
-            
-            
-          >
-                 <Text color="green.200" marginRight={5} fontWeight={"bold"} fontFamily={"monospace"}
-            fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
-            
-            >&lt;Project/&gt;</Text>
-          </Link>
-
-          <Link
-            
-            to="#skill"
-            smooth
-            
-            
-          >
-             <Text color="green.200" marginRight={5} fontWeight={"bold"} fontFamily={"monospace"}
-            fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
-            
-            >&lt;Skill/&gt;</Text>
-          </Link>
-
- 
-          <Link
-            
-            to="#contact"
-            smooth
-
-            
-          >        <Text color="green.200" marginRight={5} fontWeight={"bold"} fontFamily={"monospace"}
-          fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
+          <Image src={Prantor_Logo} paddingTop="3rem" boxSize={"330px"} />
+        </Box>
+      </Link>
+      <Flex
           
-          >&lt;Contact/&gt;</Text>
+          justifyContent={"space-between"}
+          display={{ base: "none", md: "flex" }}
+        >
+      {menus.map((menu) => (
+       
+          <Link to={menu.location} key={menu.id}>
+            <Text
+              bgGradient="linear(to-l, #29acff, green.200)"
+              bgClip={"text"}
+              marginRight={5}
+              fontWeight={"bold"}
+              fontFamily={"monospace"}
+              fontSize={"20px"}
+              _hover={{
+                animation: spinAnimation,
+                borderBottom: "5px solid #29acff",
+              }}
+            >
+            
+              {menu.name}
+            </Text>
           </Link>
-        </Flex>
-
+        
+      ))}
+</Flex>
       {/* Mobile Navigation Drawer */}
-      <Drawer placement="left" onClose={closeMobileNav} isOpen={isMobileNavOpen}>
-   
+      <Drawer
+        placement="left"
+        onClose={closeMobileNav}
+        isOpen={isMobileNavOpen}
+      >
         <DrawerOverlay />
         <DrawerContent bg="#121212" color="white">
           <DrawerCloseButton color="white" />
-          <DrawerBody>  
- 
+          <DrawerBody>
             <Flex direction="column">
-            <Link
-            
-            to="#home"
-           
-            
-          >
-            <Text color="green.200" paddingTop={"1rem"} fontWeight={"bold"} fontFamily={"monospace"}
-            fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
-            
-            > &lt;Home/&gt; </Text>
-          </Link>
-
-          <Link
-            
-            to="#project"
-           smooth
-            
-            
-          >
-                 <Text color="green.200" paddingTop={"1rem"} fontWeight={"bold"} fontFamily={"monospace"}
-            fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
-            
-            >&lt;Project/&gt;</Text>
-          </Link>
-
-          <Link
-            
-            to="#skill"
-            smooth
-            
-            
-          >
-             <Text color="green.200" paddingTop={"1rem"} fontWeight={"bold"} fontFamily={"monospace"}
-            fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
-            
-            >&lt;Skill/&gt;</Text>
-          </Link>
-
- 
-          <Link
-            
-            to="#contact"
-            smooth
-
-            
-          >        <Text color="green.200" paddingTop={"1rem"} fontWeight={"bold"} fontFamily={"monospace"}
-          fontSize={"20px"} _hover={{borderBottom: "3px solid #29acff", borderBottomRadius:"1px"}}
-          
-          >&lt;Contact/&gt;</Text>
-          </Link>
+              {menus.map((menu) => (
+                <Link key={menu.id} to={menu.location}>
+                  <Text
+                    bgGradient="linear(to-l, #29acff, green.200)"
+                    bgClip={"text"}
+                    paddingTop={"1rem"}
+                    fontWeight={"hairline"}
+                    fontFamily={"monospace"}
+                    fontSize={"20px"}
+                    _hover={{
+                      borderBottom: "3px solid #29acff",
+                      borderBottomRadius: "1px ",
+                    }}
+                  >
+                    {" "}
+                    {menu.name}{" "}
+                  </Text>
+                </Link>
+              ))}
             </Flex>
           </DrawerBody>
         </DrawerContent>

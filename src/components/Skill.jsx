@@ -7,21 +7,10 @@ import Mongodb_Logo from "../assets/mongodb.png"
 import Zustand_Logo from "../assets/zustand_logo.jpg"
 import ReactQuery_Logo from "../assets/react-query.png"
 import Expressjs_Logo from "../assets/express-js.png"
-import ChakraUI_Logo from "../assets/chakraui.png"
+import NextJs_Logo from "../assets/nextjs_logo.png"
+
 const Skill = () => {
-  const skills = [
 
-      {id : 1, src :React_Logo, name : "React"  },
-      {id : 2, src :Typescript_Logo, name : "TypeScript"  },
-      {id : 3, src :Nodejs_Logo, name : "Node JS"  },
-      {id : 4, src :Mongodb_Logo, name : "MongoDB"  },
-      {id : 5, src :Zustand_Logo, name : "Zustand"  },
-      {id : 6, src :ReactQuery_Logo, name : "React Query"  },
-      {id : 7, src :Expressjs_Logo, name : "Express JS"  },
-      {id : 8, src :ChakraUI_Logo, name : "Chakra UI"  },
-
-
-  ]
   const gradientBorder = `
   border: 2px solid;
   border-image-slice: 1;
@@ -44,21 +33,51 @@ const Skill = () => {
 
 
 <SimpleGrid marginTop={"5rem"}  columns={{ sm: 2, md: 2, lg: 4, xl: 4,  }} spacingY={10}  >
-{
- skills.map((skill) => (
 
 
-<Box key={skill.id} boxShadow={"dark-lg"} border={"4px"} css= {gradientBorder}>
-  <Image  boxSize={"100px"} src={skill.src}  />
-   <Text className="text" textAlign={"center"}>{skill.name} </Text>
+
+<Box data-aos="fade-down-right"  data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"  boxShadow={"dark-lg"} border={"4px"} css= {gradientBorder}>
+  <Image  boxSize={"100px"} src={React_Logo}  />
+   <Text className="text" textAlign={"center"}>React </Text>
+  </Box>
+<Box data-aos="fade-down-right"  data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"  boxShadow={"dark-lg"} border={"4px"} css= {gradientBorder}>
+  <Image  boxSize={"100px"} src={Typescript_Logo}  />
+   <Text className="text" textAlign={"center"}>TypeScript </Text>
+  </Box>
+<Box data-aos="fade-down-left"  data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"  boxShadow={"dark-lg"} border={"4px"} css= {gradientBorder}>
+  <Image  boxSize={"100px"} src={NextJs_Logo}  />
+   <Text className="text" textAlign={"center"}>NextJS </Text>
+  </Box>
+<Box data-aos="fade-down-left"  data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"  boxShadow={"dark-lg"} border={"4px"} css= {gradientBorder}>
+  <Image  boxSize={"100px"} src={Nodejs_Logo}  />
+   <Text className="text" textAlign={"center"}>NodeJS </Text>
+  </Box>
+<Box data-aos="fade-up-right"  data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"  boxShadow={"dark-lg"} border={"4px"} css= {gradientBorder}>
+  <Image  boxSize={"100px"} src={Mongodb_Logo}  />
+   <Text className="text" textAlign={"center"}>MongoDB </Text>
+  </Box>
+<Box data-aos="fade-up-right"  data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"  boxShadow={"dark-lg"} border={"4px"} css= {gradientBorder}>
+  <Image  boxSize={"100px"} src={Zustand_Logo}  />
+   <Text className="text" textAlign={"center"}>Zustand </Text>
+  </Box>
+<Box data-aos="fade-up-left"  data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"  boxShadow={"dark-lg"} border={"4px"} css= {gradientBorder}>
+  <Image  boxSize={"100px"} src={ReactQuery_Logo}  />
+   <Text className="text" textAlign={"center"}>ReactQuery </Text>
+  </Box>
+<Box data-aos="fade-up-left"  data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"  boxShadow={"dark-lg"} border={"4px"} css= {gradientBorder}>
+  <Image  boxSize={"100px"} src={Expressjs_Logo}  />
+   <Text className="text" textAlign={"center"}>ExpressJS </Text>
   </Box>
 
 
-
-
-) )
-
-}
 </SimpleGrid>
 
 

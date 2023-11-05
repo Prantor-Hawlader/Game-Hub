@@ -7,23 +7,30 @@ import Skill from './components/Skill';
 import { Grid, GridItem } from '@chakra-ui/react';
 import Contact from './components/Contact';
 import PreLoader from './components/Preloader';
-
+import  { useState, useEffect } from 'react';
 
 function App() {
-  
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate an asynchronous operation (e.g., fetching data) that takes some time.
+    // Replace this with your actual initialization logic.
+    setTimeout(() => {
+      setLoading(false); // Set loading to false when the operation is complete.
+    }, 2000); // Simulating a 2-second loading delay
+  }, []);
 
   return (
-    <div>
-      <PreLoader/>
+   
+     
    <BrowserRouter>
+   {loading ?  <PreLoader/> :  <Grid  templateAreas={`"nav nav" "main main"`} backgroundColor={"#121212"}  >
 
-  <Grid templateAreas={`"nav nav" "main main"`} backgroundColor={"#121212"}  >
-
-<GridItem area={"nav"} width={"100%"}> <Navbar/>
+<GridItem scrollBehavior={"smooth"} area={"nav"} width={"100%"}> <Navbar/>
 
  </GridItem>
 
-<GridItem    area={"main"} paddingTop={"100px"} width={"100%"} mx={"auto"}>
+<GridItem scrollBehavior={"smooth"}   area={"main"} paddingTop={"100px"} width={"100%"} mx={"auto"}>
 
 
    <Hero/>
@@ -33,12 +40,14 @@ function App() {
  <Contact/>
 </GridItem>
 
-  </Grid>
+  </Grid>}
+  
+ 
    
    </BrowserRouter>
 
     
-    </div>
+   
   )
 }
 

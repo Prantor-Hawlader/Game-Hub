@@ -46,6 +46,7 @@ const Contact = () => {
 
   });
   }
+ 
   return (
     <>
         
@@ -67,7 +68,7 @@ const Contact = () => {
       <Flex align={"center"} justifyContent={"center"}  > 
         <Box
           
-          color="white"
+          
           borderRadius="lg"
           m={{ sm: 4, md: 16, lg: 10 }}
           p={{ sm: 5, md: 5, lg: 16 }}>
@@ -156,7 +157,13 @@ const Contact = () => {
                 </Box>
               </WrapItem>
               <WrapItem>
-                <Box bg="white" borderRadius="lg">
+                <Box css={{
+      
+       backgroundImage:"linear-gradient(45deg, #29acff, rgb(100, 209, 123))",
+       backgroundOrigin: "border-box",
+       backgroundClip: "content-box, border-box"
+      }}  data-aos="flip-left"  data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"  bg="grey" borderRadius="lg">
                   <Box m={8} color="#0B0E3F">
                     <VStack spacing={5}>
                    <form ref={ref} onSubmit={handleSubmit}>
