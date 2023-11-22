@@ -48,7 +48,7 @@ const Project = () => {
 <Heading  bgGradient="linear(to-l, #29acff, green.200)" bgClip={"text"}>
 {item.title}
 </Heading>
-<Text className="text" marginTop={"1.5rem"} fontSize={"20px"} >
+<Text className="text" color={"whiteAlpha.900"} marginTop={"1.5rem"} fontSize={"20px"} >
 {item.details}
 
 </Text>
