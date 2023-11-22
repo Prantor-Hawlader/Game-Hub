@@ -17,7 +17,7 @@ function App() {
     // Replace this with your actual initialization logic.
     setTimeout(() => {
       setLoading(false); // Set loading to false when the operation is complete.
-    }, 2000); // Simulating a 2-second loading delay
+    }, 3500); // Simulating a 2-second loading delay
   }, []);
 
   return (
@@ -26,11 +26,11 @@ function App() {
    <BrowserRouter>
    {loading ?  <PreLoader/> :  <Grid  templateAreas={`"nav nav" "main main"`} backgroundColor={"#121212"}  >
 
-<GridItem scrollBehavior={"smooth"} area={"nav"} width={"100%"}> <Navbar/>
+<GridItem  area={"nav"} width={"100%"}> <Navbar/>
 
  </GridItem>
 
-<GridItem scrollBehavior={"smooth"}   area={"main"} paddingTop={"100px"} width={"100%"} mx={"auto"}>
+<GridItem scrollBehavior={"smooth"}   area={"main"} paddingTop={"4rem"} width={"100%"} mx={"auto"}>
 
 
    <Hero/>

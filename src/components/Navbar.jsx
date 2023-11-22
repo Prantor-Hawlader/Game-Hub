@@ -35,14 +35,14 @@ const Navbar = () => {
 
   const spinAnimation = `${spin} infinite 1s linear`;
   const menus = [
-    { id: 1,location : "#home", name: "<Home/>" },
-    { id: 2,location : "#project", name: "<Project/>" },
-    { id: 3,location : "#skill", name: "<Skills/>" },
-    { id: 4, location : "#contact",name: "<Contact/>" },
+    { id: 1,location : "#home", name: "Home" },
+    { id: 2,location : "#project", name: "Project" },
+    { id: 3,location : "#skill", name: "Skills" },
+    { id: 4, location : "#contact",name: "Contact" },
   ];
 
   return (
-    <HStack height={"5rem"} justify="space-between" padding={3}>
+    <HStack height={"4rem"} justify="space-between" margin={3}>
       <Box display={{ base: "block", md: "none" }}>
         <IconButton
           icon={<FiMenu />}
@@ -54,7 +54,7 @@ const Navbar = () => {
         />
       </Box>
 
-      <Link to={"/"}>
+      <Link to={"#home"}>
         <Box>
         
           <Image src={Prantor_Logo} paddingTop="3rem" boxSize={"330px"} />

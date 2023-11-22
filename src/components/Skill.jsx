@@ -8,7 +8,8 @@ import Zustand_Logo from "../assets/zustand_logo.jpg"
 import ReactQuery_Logo from "../assets/react-query.png"
 import Expressjs_Logo from "../assets/express-js.png"
 import NextJs_Logo from "../assets/nextjs_logo.png"
-
+import LottieAnimation from "./Design"
+import lottie from "./Styles/animate.json"
 const Skill = () => {
 
   const gradientBorder = `
@@ -18,7 +19,8 @@ const Skill = () => {
 `;
   return (
    <>
-    <Box marginTop={"10rem"} position='relative' padding='10' id="skill">
+    <Box marginTop={"20rem"} position='relative' padding='10' id="skill">
+     
     <Divider />
 
     <AbsoluteCenter>
@@ -27,12 +29,12 @@ const Skill = () => {
         fontWeight={"extrabold"} >
       Technologies
       </Text>
-
+      <Box width={"300px"} height={"270px"}><LottieAnimation animate={lottie}/></Box>
     </AbsoluteCenter>
   </Box>
 
 
-<SimpleGrid marginTop={"5rem"}  columns={{ sm: 2, md: 2, lg: 4, xl: 4,  }} spacingY={10}  >
+<SimpleGrid marginTop={"7rem"}  columns={{ sm: 2, md: 2, lg: 4, xl: 4,  }} spacingY={10}  >
 
 
 
