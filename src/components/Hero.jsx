@@ -36,7 +36,7 @@ const Hero = () => {
           I am {text}
           <Cursor />
         </Text>
-        <Text className="text" fontSize={"20px"} color={"whiteAlpha.900"}>
+        <Text className="text" fontSize={"20px"} color={"blackAlpha.900"}>
           I believe that hard work beats talent. I am a full stack web developer
           and I love how collaboration and knowledge sharing happened through
           open-source.

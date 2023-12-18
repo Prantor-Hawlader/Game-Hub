@@ -24,7 +24,7 @@ const Project = () => {
 
   
   {items.map((item,index)=> (
-<SimpleGrid columns={2}  marginX={"5rem"} marginTop={"10rem"} 
+<SimpleGrid  columns={{base : 1 ,sm: 1, md: 2, lg : 2, xl : 2}}   marginX={"5rem"} marginTop={"10rem"} 
        key={index}>
  {/* css={{
         "&:nth-child(2n + 1)": {
@@ -48,7 +48,7 @@ const Project = () => {
 <Heading  bgGradient="linear(to-l, #29acff, green.200)" bgClip={"text"}>
 {item.title}
 </Heading>
-<Text  className="text" color={"blackAlpha.900"} marginTop={"1.5rem"} fontSize={"20px"} >
+<Text  className="text" color={"blackAlpha.900"} marginTop={"1.5rem"} fontWeight={"semibold"} fontSize={"20px"} >
 {item.details}
 
 </Text>
