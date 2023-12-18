@@ -34,7 +34,7 @@ const Skill = () => {
   </Box>
 
 
-<SimpleGrid marginTop={"7rem"}  columns={{ sm: 2, md: 2, lg: 4, xl: 4,  }} spacingY={10}  >
+<SimpleGrid marginTop={"7rem"}  columns={{ base : 2, sm: 2, md: 3, lg: 4, xl: 4,  }} spacingY={10}  >
 
 
 

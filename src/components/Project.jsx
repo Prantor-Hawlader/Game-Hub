@@ -1,4 +1,4 @@
-import { Flex ,AbsoluteCenter,Box,Text,Button, Image, Heading, Divider} from "@chakra-ui/react"
+import { SimpleGrid ,AbsoluteCenter,Box,Text,Button, Image, Heading, Divider} from "@chakra-ui/react"
 import "./Styles/Project.css"
 import Web_Template from "../assets/web-template.png"
 import items from "./ProjectList"
@@ -24,14 +24,14 @@ const Project = () => {
 
   
   {items.map((item,index)=> (
-<Flex marginX={"5rem"} marginTop={"10rem"} 
-      css={{
+<SimpleGrid columns={2}  marginX={"5rem"} marginTop={"10rem"} 
+       key={index}>
+ {/* css={{
         "&:nth-child(2n + 1)": {
           flexDirection: "row-reverse",
         },
-      }}  key={index}   >
-
-<Box marginBottom={"3rem"}   >
+      }} */}
+<Box marginBottom={"3rem"} >
 
 <div className="card-container">
   <Box className="card" >
@@ -48,18 +48,18 @@ const Project = () => {
 <Heading  bgGradient="linear(to-l, #29acff, green.200)" bgClip={"text"}>
 {item.title}
 </Heading>
-<Text className="text" color={"whiteAlpha.900"} marginTop={"1.5rem"} fontSize={"20px"} >
+<Text  className="text" color={"blackAlpha.900"} marginTop={"1.5rem"} fontSize={"20px"} >
 {item.details}
 
 </Text>
 </Box>
 
-<Button  data-aos="flip-down"  data-aos-easing="ease-out-cubic"
+<Button color={"blackAlpha.900"} data-aos="flip-down"  data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"  _hover={{bgGradient:"linear(to-l, #29acff, green.200)"}} as={"a"} target="_blank" marginTop={"2rem"} href={item.link} > Let&apos;s Visit </Button>
 
 </Box>
 
-   </Flex>
+   </SimpleGrid>
     
   ))}
 
