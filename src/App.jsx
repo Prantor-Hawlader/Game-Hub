@@ -26,11 +26,11 @@ function App() {
    <BrowserRouter>
    {loading ?  <PreLoader/> :  <Grid  templateAreas={`"nav nav" "main main"`} backgroundColor={"#121212"}  >
 
-<GridItem  area={"nav"} width={"100%"}> <Navbar/>
+<GridItem width = "100%"  area={"nav"} > <Navbar />
 
  </GridItem>
 
-<GridItem scrollBehavior={"smooth"}   area={"main"} paddingTop={"4rem"} width={"100%"} mx={"auto"}>
+<GridItem bg={"yellow.100"} scrollBehavior={"smooth"}   area={"main"} paddingTop={"4rem"} width={"100"}>
 
 
    <Hero/>
