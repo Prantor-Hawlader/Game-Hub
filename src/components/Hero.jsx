@@ -12,12 +12,12 @@ const Hero = () => {
   });
 
   return (
-    <SimpleGrid id="home" columns={{ sm: 1, md: 1, lg: 2, xl: 2 }} mx={"9rem"}>
-      <Box marginLeft={"auto"} display={"block"} marginRight={"auto"}>
+    <SimpleGrid id="home" columns={{ sm: 1, md: 1, lg: 2, xl: 2 }}  mx="2rem" >
+      <Box >
         <LottieAnimation animate={lottie} />
       </Box>
 
-      <Box marginTop={"6rem"}>
+      <Box marginTop={"6rem"} >
         <Text
           className="header"
           fontWeight={"extrabold"}
@@ -30,17 +30,18 @@ const Hero = () => {
           bgGradient="linear(to-l, #29acff, green.200)"
           bgClip={"text"}
           marginBottom={"15px"}
-          fontSize={"35px"}
+          fontSize= {{ base: "22px", lg: "35px" }}
+         
           fontWeight={"bold"}
         >
-          I am {text}
-          <Cursor />
+         <Box>I am {text}<Cursor cursorColor="Black"/></Box>
+          
         </Text>
-        <Text className="text" fontSize={"20px"} color={"blackAlpha.900"}>
+       <Box> <Text className="text" fontSize={"20px"} color={"blackAlpha.900"}>
           I believe that hard work beats talent. I am a full stack web developer
           and I love how collaboration and knowledge sharing happened through
           open-source.
-        </Text>
+        </Text></Box>
       </Box>
     </SimpleGrid>
   );
