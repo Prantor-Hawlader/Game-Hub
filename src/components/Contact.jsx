@@ -7,7 +7,6 @@ import {
   Button,
   VStack,
   HStack,
-  Wrap,
   WrapItem,
   FormControl,
   FormLabel,
@@ -18,13 +17,7 @@ import {
   Divider,
   AbsoluteCenter,
 } from "@chakra-ui/react";
-import {
-  MdPhone,
-  MdEmail,
-  MdLocationOn,
-  MdFacebook,
-  MdOutlineEmail,
-} from "react-icons/md";
+import { MdFacebook, MdOutlineEmail } from "react-icons/md";
 import { BsGithub, BsLinkedin, BsPerson } from "react-icons/bs";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -84,171 +77,130 @@ const Contact = () => {
             m={{ sm: 4, md: 16, lg: 10 }}
             p={{ sm: 5, md: 5, lg: 16 }}
           >
-            <Box p={4}>
-              <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
-                <WrapItem>
-                  <Box>
-                    <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                      <VStack pl={7} spacing={3} alignItems="flex-start">
-                        <Text
-                          className="text"
-                          size="md"
-                          height="48px"
-                          width="200px"
-                          color="#DCE2FF"
-                          leftIcon={<MdPhone size="20px" />}
-                        >
-                          +8801799037182
-                        </Text>
-                        <Text
-                          className="text"
-                          size="md"
-                          height="48px"
-                          width="200px"
-                          variant="ghost"
-                          color="#DCE2FF"
-                          leftIcon={<MdEmail size="20px" />}
-                        >
-                          prantor502@gmail.com
-                        </Text>
-                        <Text
-                          className="text"
-                          size="md"
-                          height="48px"
-                          width="200px"
-                          variant="ghost"
-                          color="#DCE2FF"
-                          leftIcon={<MdLocationOn size="20px" />}
-                        >
-                          Dhaka, Bangladesh
-                        </Text>
-                      </VStack>
-                    </Box>
-                    <HStack
-                      mt={{ lg: 10, md: 10 }}
-                      spacing={5}
-                      px={5}
-                      alignItems="flex-start"
-                    >
-                      <IconButton
-                        as={"a"}
-                        href="https://www.facebook.com/prantor.azijul/"
-                        target="_blank"
-                        aria-label="facebook"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: "#29acff" }}
-                        icon={<MdFacebook size="28px" />}
-                      />
-                      <IconButton
-                        as={"a"}
-                        href="https://github.com/Prantor-Hawlader"
-                        target="_blank"
-                        aria-label="github"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: "#29acff" }}
-                        icon={<BsGithub size="28px" />}
-                      />
-                      <IconButton
-                        as={"a"}
-                        href="https://www.linkedin.com/in/prantor-hawlader-04937b1b3/"
-                        target="_blank"
-                        aria-label="linkedin"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: "#29acff" }}
-                        icon={<BsLinkedin size="28px" />}
-                      />
-                    </HStack>
-                  </Box>
-                </WrapItem>
-                <WrapItem>
-                  <Box
-                    css={{
-                      backgroundImage:
-                        "linear-gradient(45deg, #29acff, rgb(100, 209, 123))",
-                      backgroundOrigin: "border-box",
-                      backgroundClip: "content-box, border-box",
-                    }}
-                    data-aos="flip-left"
-                    data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000"
-                    bg="grey"
-                    borderRadius="lg"
+            <Box textAlign={{ base: "center" }}>
+              <WrapItem>
+                <Box>
+                  <HStack
+                    mt={{ lg: 20, md: 10 }}
+                    spacing={5}
+                    mx={{ base: "auto" }}
+                    alignItems="flex-start"
                   >
-                    <Box m={8} color="#0B0E3F">
-                      <VStack spacing={5}>
-                        <form ref={ref} onSubmit={handleSubmit}>
-                          <FormControl id="name">
-                            <FormLabel>Your Name</FormLabel>
-                            <InputGroup borderColor="green.200">
-                              <InputLeftElement
-                                pointerEvents="none"
-                                children={<BsPerson color="gray.800" />}
-                              />
-                              <Input type="text" size="md" name="name" />
-                            </InputGroup>
-                          </FormControl>
-                          <FormControl id="name">
-                            <FormLabel>Mail</FormLabel>
-                            <InputGroup borderColor="green.200">
-                              <InputLeftElement
-                                pointerEvents="none"
-                                children={<MdOutlineEmail color="gray.800" />}
-                              />
-                              <Input type="text" size="md" name="email" />
-                            </InputGroup>
-                          </FormControl>
-                          <FormControl id="name">
-                            <FormLabel>Message</FormLabel>
-                            <Textarea
-                              name="message"
-                              borderColor="green.200"
-                              onClick={{ borderColor: "red" }}
-                              placeholder="message"
-                            />
-                          </FormControl>
-                          <FormControl id="name" float="right">
-                            {success ? (
-                              <Button
-                                marginTop={"10px"}
-                                type="submit"
-                                bg={"#121212"}
-                                color={"whiteAlpha.900"}
-                                _hover={{
-                                  bgGradient:
-                                    "linear(to-l, #29acff, green.200)",
-                                  color: "#121212",
-                                }}
-                              >
-                                Successfully message has sent
-                              </Button>
-                            ) : (
-                              <Button
-                                marginTop={"10px"}
-                                type="submit"
-                                bg={"#121212"}
-                                color={"whiteAlpha.900"}
-                                _hover={{
-                                  bgGradient:
-                                    "linear(to-l, #29acff, green.200)",
-                                  color: "#121212",
-                                }}
-                              >
-                                Send Message
-                              </Button>
-                            )}
-                          </FormControl>
-                        </form>
-                      </VStack>
-                    </Box>
-                  </Box>
-                </WrapItem>
-              </Wrap>
+                    <IconButton
+                      as={"a"}
+                      href="https://www.facebook.com/prantor.azijul/"
+                      target="_blank"
+                      aria-label="facebook"
+                      variant="ghost"
+                      size="lg"
+                      isRound={true}
+                      _hover={{ bg: "#29acff" }}
+                      icon={<MdFacebook size="28px" />}
+                    />
+                    <IconButton
+                      as={"a"}
+                      href="https://github.com/Prantor-Hawlader"
+                      target="_blank"
+                      aria-label="github"
+                      variant="ghost"
+                      size="lg"
+                      isRound={true}
+                      _hover={{ bg: "#29acff" }}
+                      icon={<BsGithub size="28px" />}
+                    />
+                    <IconButton
+                      as={"a"}
+                      href="https://www.linkedin.com/in/prantor-hawlader-04937b1b3/"
+                      target="_blank"
+                      aria-label="linkedin"
+                      variant="ghost"
+                      size="lg"
+                      isRound={true}
+                      _hover={{ bg: "#29acff" }}
+                      icon={<BsLinkedin size="28px" />}
+                    />
+                  </HStack>
+                </Box>
+              </WrapItem>
+
+              <Box
+                css={{
+                  backgroundImage:
+                    "linear-gradient(45deg, #29acff, rgb(100, 209, 123))",
+                  backgroundOrigin: "border-box",
+                  backgroundClip: "content-box, border-box",
+                }}
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                borderRadius="lg"
+                py={10}
+              >
+                <Box m={8} color="#0B0E3F">
+                  <VStack spacing={5}>
+                    <form ref={ref} onSubmit={handleSubmit}>
+                      <FormControl id="name">
+                        <FormLabel>Your Name</FormLabel>
+                        <InputGroup borderColor="green.200">
+                          <InputLeftElement
+                            pointerEvents="none"
+                            children={<BsPerson />}
+                          />
+                          <Input type="text" size="md" name="name" />
+                        </InputGroup>
+                      </FormControl>
+                      <FormControl id="name">
+                        <FormLabel>Mail</FormLabel>
+                        <InputGroup borderColor="green.200">
+                          <InputLeftElement
+                            pointerEvents="none"
+                            children={<MdOutlineEmail />}
+                          />
+                          <Input type="text" size="md" name="email" />
+                        </InputGroup>
+                      </FormControl>
+                      <FormControl id="name">
+                        <FormLabel>Message</FormLabel>
+                        <Textarea
+                          name="message"
+                          borderColor="green.200"
+                          onClick={{ borderColor: "red" }}
+                          placeholder="message"
+                        />
+                      </FormControl>
+                      <FormControl id="name" float="right">
+                        {success ? (
+                          <Button
+                            marginTop={"10px"}
+                            type="submit"
+                            bg={"#121212"}
+                            color={"whiteAlpha.900"}
+                            _hover={{
+                              bgGradient: "linear(to-l, #29acff, green.200)",
+                              color: "#121212",
+                            }}
+                          >
+                            Successfully message has sent
+                          </Button>
+                        ) : (
+                          <Button
+                            marginTop={"10px"}
+                            type="submit"
+                            bg={"#121212"}
+                            color={"whiteAlpha.900"}
+                            _hover={{
+                              bgGradient: "linear(to-l, #29acff, green.200)",
+                              color: "#121212",
+                            }}
+                          >
+                            Send Message
+                          </Button>
+                        )}
+                      </FormControl>
+                    </form>
+                  </VStack>
+                </Box>
+              </Box>
             </Box>
           </Box>
         </Flex>

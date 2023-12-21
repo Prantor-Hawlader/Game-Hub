@@ -30,7 +30,7 @@ function App() {
 
  </GridItem>
 
-<GridItem width={"full"} bg={"yellow.100"} scrollBehavior={"smooth"}   area={"main"} paddingTop={"4rem"} >
+<GridItem width={"full"} bg={"black.100"} scrollBehavior={"smooth"}   area={"main"} paddingTop={"4rem"} >
 
 
    <Hero/>
@@ -52,6 +52,3 @@ function App() {
 }
 
 export default App
-
-
-

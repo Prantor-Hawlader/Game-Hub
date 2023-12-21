@@ -12,12 +12,12 @@ const Hero = () => {
   });
 
   return (
-    <SimpleGrid id="home" columns={{ sm: 1, md: 1, lg: 2, xl: 2 }}  mx="2rem" >
-      <Box >
+    <SimpleGrid id="home" columns={{ sm: 1, md: 1, lg: 2, xl: 2 }} mx="2rem"  >
+      <Box  >
         <LottieAnimation animate={lottie} />
       </Box>
 
-      <Box marginTop={"6rem"} >
+      <Box marginTop={"6rem"}  >
         <Text
           className="header"
           fontWeight={"extrabold"}
