@@ -66,22 +66,18 @@ const Contact = () => {
       </Box>
       <Container
         maxW="full"
-        mt={0}
+       
         centerContent
         overflow="hidden"
-        marginTop={"5rem"}
+        marginTop={{base : "5rem"}}
       >
         <Flex align={"center"} justifyContent={"center"}>
-          <Box
-            borderRadius="lg"
-            m={{ sm: 4, md: 16, lg: 10 }}
-            p={{ sm: 5, md: 5, lg: 16 }}
-          >
-            <Box textAlign={{ base: "center" }}>
+        
+            <Box >
               <WrapItem>
                 <Box>
                   <HStack
-                    mt={{ lg: 20, md: 10 }}
+                    mt={{ lg: 5, md: 10 }}
                     spacing={5}
                     mx={{ base: "auto" }}
                     alignItems="flex-start"
@@ -202,7 +198,7 @@ const Contact = () => {
                 </Box>
               </Box>
             </Box>
-          </Box>
+         
         </Flex>
       </Container>
       <Text className="text" pt={3} fontSize={"md"} textAlign={"center"}>

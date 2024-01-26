@@ -69,7 +69,7 @@ const Project = () => {
               <Text
                 textAlign={{ base: "center" }}
                 className="text"
-                color={"blackAlpha.900"}
+                color={"whiteAlpha.900"}
                 marginTop={"1.5rem"}
                 fontWeight={"semibold"}
                 fontSize={"20px"}
@@ -80,12 +80,13 @@ const Project = () => {
 
             <Box textAlign={{ base: "center" }}>
               <Button
-                color={"blackAlpha.900"}
+                color={"whiteAlpha.900"}
                 _hover={{ bgGradient: "linear(to-l, #29acff, green.200)" }}
                 as={"a"}
                 target="_blank"
                 marginTop={"2rem"}
                 href={item.link}
+                backgroundColor="black"
               >
                 Let&apos;s Visit
               </Button>

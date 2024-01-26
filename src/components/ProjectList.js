@@ -1,5 +1,7 @@
 import Project1 from "../assets/game_hub.png";
 import Project2 from "../assets/Project2.png";
+import Project3 from "../assets/adminWebsite.png";
+import Project4 from "../assets/storeWebsite.png";
 const items = [
   {
     id: 1,
@@ -9,6 +11,23 @@ const items = [
       "This is a fun project where different genres of games have been sorted.I built this website using React,Typescript,React Query and Zustand for state management.",
     link: "https://prantor-gamer-world.vercel.app/",
   },
+  {
+    id: 3,
+    img: Project3,
+    title: "E-commerce admin dashboard",
+    details:
+      "Using this dashboard we can create store, products, categories, billboards, and so on. For building this e-commerce admin dashboard, I used mainly Next.js, Typescript, Prisma, Tailwind, and MySQL. I also used Planetscale for the database and Cloudinary for image upload.",
+    link: "https://future-commerce-admin.vercel.app/",
+  },
+  {
+    id: 4,
+    img: Project4,
+    title: "E-commerce store",
+    details:
+      "Here is the main e-commerce store which is controlled by the admin dashboard. I used Next.js, Typescript, Stripe, and Tailwind to build this website",
+    link: "https://future-commerce-store.vercel.app/",
+  },
+
   {
     id: 2,
     img: Project2,
