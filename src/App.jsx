@@ -22,14 +22,13 @@ function App() {
 
   return (
     <>
-    <Star/>
+      <Star />
       {loading ? (
         <PreLoader />
       ) : (
-        <Grid bgGradient="radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)" templateAreas={`"nav nav" "main main"`}>
-          <GridItem scrollBehavior={"smooth"} area={"nav"} width={"full"} >
-          
-            <Navbar/>
+        <Grid templateAreas={`"nav nav" "main main"`}>
+          <GridItem scrollBehavior={"smooth"} area={"nav"} width={"full"}>
+            <Navbar />
           </GridItem>
 
           <GridItem
@@ -38,11 +37,12 @@ function App() {
             area={"main"}
             paddingTop={"4rem"}
           >
-           
             <Hero />
             <Project />
+            <Star />
             <Skill />
             <Contact />
+            <Star />
           </GridItem>
         </Grid>
       )}

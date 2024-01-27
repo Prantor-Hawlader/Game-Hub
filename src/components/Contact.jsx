@@ -88,6 +88,7 @@ const Contact = () => {
                     variant="ghost"
                     size="lg"
                     isRound={true}
+                    bg="whiteAlpha.400"
                     _hover={{ bg: "#29acff" }}
                     icon={<MdFacebook size="28px" />}
                   />
@@ -99,6 +100,7 @@ const Contact = () => {
                     variant="ghost"
                     size="lg"
                     isRound={true}
+                    bg="whiteAlpha.400"
                     _hover={{ bg: "#29acff" }}
                     icon={<BsGithub size="28px" />}
                   />
@@ -107,6 +109,7 @@ const Contact = () => {
                     href="https://www.linkedin.com/in/prantor-hawlader-04937b1b3/"
                     target="_blank"
                     aria-label="linkedin"
+                    bg="whiteAlpha.400"
                     variant="ghost"
                     size="lg"
                     isRound={true}

@@ -37,7 +37,7 @@ const Project = () => {
         <SimpleGrid
           width={"full"}
           columns={{ base: 1, sm: 1, md: 2, lg: 2, xl: 2 }}
-          paddingX={"5rem"}
+          paddingX={"3rem"}
           marginTop={"12rem"}
           key={index}
         >
