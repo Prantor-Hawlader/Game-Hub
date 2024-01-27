@@ -22,12 +22,15 @@ function App() {
 
   return (
     <>
-      <Star />
       {loading ? (
         <PreLoader />
       ) : (
-        <Grid templateAreas={`"nav nav" "main main"`}>
+        <Grid
+          bgGradient="radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)"
+          templateAreas={`"nav nav" "main main"`}
+        >
           <GridItem scrollBehavior={"smooth"} area={"nav"} width={"full"}>
+            <Star />
             <Navbar />
           </GridItem>
 
