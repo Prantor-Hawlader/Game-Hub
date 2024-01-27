@@ -1,25 +1,27 @@
+import Prantor_Logo from "../assets/Logos.png";
 import {
   Box,
   Flex,
-  
+  HStack,
   Text,
-  Image,
-  keyframes,
   Link,
+  IconButton,
+  keyframes,
+  Image,
+  useDisclosure,
+  Stack,
 } from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
-import Prantor_Logo from "../assets/Logos.png";
-import "./Styles/Star.css";
-
-const spin = keyframes`  
-0% {
-  background-position-x: 100px;
+const spin = keyframes`
+ 0% {
+   background-position-x: 100px;
   
-} 
-`;
+ }`;
 
-const Navbar = () => {
+export default function Navbar() {
   const spinAnimation = `${spin} infinite 1s linear`;
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const menus = [
     { id: 1, location: "#home", name: "Home" },
     { id: 2, location: "#project", name: "Project" },
@@ -28,45 +30,71 @@ const Navbar = () => {
   ];
 
   return (
-    <Flex 
-      as="header" position="fixed" w="100%"
-      // direction={{base : "column", md : "row"}}
-      borderRadius="lg"
-      bgGradient="radial-gradient(ellipse at bottom, #0d1e31, #111)"
-      overflow="hidden"
-      alignItems="center"
-      
-      m={3}
-      height={"4rem"}
-      
-    >
-     
-      <Box paddingTop="50px">
-        <Link href={"https://prantor-portfolio.vercel.app/"}>
-          <Image src={Prantor_Logo} boxSize={"330px"} />
-        </Link>
-      </Box>
-            
-
-      <Box display="flex" justifyContent="space-between" justifySelf="center" justifyItems="center">
-        {menus.map((menu) => (
-          <Link href={menu.location} key={menu.id}>
-            <Text
-              bgGradient="linear(to-l, #29acff, green.200)"
-              bgClip={"text"}
-              marginRight={5}
-              fontWeight={"bold"}
-              fontFamily={"monospace"}
-              fontSize={"20px"}
-              animation={spinAnimation}
+    <>
+      <Box
+        borderRadius="lg"
+        marginX={25}
+        marginY={5}
+        bgGradient="radial-gradient(ellipse at bottom, #0d1e31, #111)"
+        px={4}
+      >
+        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+          <IconButton
+            size={"md"}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={"Open Menu"}
+            display={{ md: "none" }}
+            onClick={isOpen ? onClose : onOpen}
+          />
+          <HStack spacing={300} alignItems={"center"}>
+            <Box>
+              <Image boxSize="330px" paddingTop={10} src={Prantor_Logo} />
+            </Box>
+            <HStack
+              as={"nav"}
+              spacing={5}
+              display={{ base: "none", md: "flex" }}
             >
-              {menu.name}
-            </Text>
-          </Link>
-        ))}
-      </Box>
-    </Flex>
-  );
-};
+              {menus.map((menu) => (
+                <Link href={menu.location} key={menu.id}>
+                  <Text
+                    bgGradient="linear(to-l, #29acff, green.200)"
+                    bgClip={"text"}
+                    marginRight={5}
+                    fontWeight={"bold"}
+                    fontFamily={"monospace"}
+                    fontSize={"20px"}
+                    animation={spinAnimation}
+                  >
+                    {menu.name}
+                  </Text>
+                </Link>
+              ))}
+            </HStack>
+          </HStack>
+        </Flex>
 
-export default Navbar;
+        {isOpen ? (
+          <Box pb={4} display={{ md: "none" }}>
+            <Stack as={"nav"} spacing={3}>
+              {menus.map((menu) => (
+                <Link href={menu.location} key={menu.id}>
+                  <Text
+                    bgGradient="linear(to-l, #29acff, green.200)"
+                    bgClip={"text"}
+                    fontWeight={"bold"}
+                    fontFamily={"monospace"}
+                    fontSize={"20px"}
+                    animation={spinAnimation}
+                  >
+                    {menu.name}
+                  </Text>
+                </Link>
+              ))}
+            </Stack>
+          </Box>
+        ) : null}
+      </Box>
+    </>
+  );
+}

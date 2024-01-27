@@ -38,7 +38,7 @@ const Project = () => {
           width={"full"}
           columns={{ base: 1, sm: 1, md: 2, lg: 2, xl: 2 }}
           paddingX={"5rem"}
-          marginTop={"15rem"}
+          marginTop={"12rem"}
           key={index}
         >
           {/* css={{

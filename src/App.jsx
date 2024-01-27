@@ -27,9 +27,9 @@ function App() {
         <PreLoader />
       ) : (
         <Grid bgGradient="radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)" templateAreas={`"nav nav" "main main"`}>
-          <GridItem scrollBehavior={"smooth"} area={"nav"} width={"full"}>
+          <GridItem scrollBehavior={"smooth"} area={"nav"} width={"full"} >
           
-            <Navbar />
+            <Navbar/>
           </GridItem>
 
           <GridItem
