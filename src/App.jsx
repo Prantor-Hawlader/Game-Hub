@@ -13,11 +13,9 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate an asynchronous operation (e.g., fetching data) that takes some time.
-
     setTimeout(() => {
-      setLoading(false); // Set loading to false when the operation is complete.
-    }, 3500); // Simulating a 2-second loading delay
+      setLoading(false);
+    }, 3000);
   }, []);
 
   return (

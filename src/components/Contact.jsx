@@ -201,8 +201,15 @@ const Contact = () => {
           </Box>
         </Flex>
       </Container>
-      <Text className="text" pt={3} fontSize={"md"} textAlign={"center"}>
-        © 2023 All rights reserved to Prantor Hawlader.
+      <Text
+        color="whiteAlpha.900"
+        className="text"
+        pt={3}
+        fontFamily="mono"
+        fontSize={"sm"}
+        textAlign={"center"}
+      >
+        © 2024 All rights reserved to Prantor Hawlader.
       </Text>
     </>
   );

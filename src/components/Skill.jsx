@@ -10,7 +10,7 @@ import React_Logo from "../assets/react.png";
 import Typescript_Logo from "../assets/typescript.png";
 import Nodejs_Logo from "../assets/nodejs.png";
 import Mongodb_Logo from "../assets/mongodb.png";
-import Zustand_Logo from "../assets/zustand_logo.jpg";
+import Tailwind_Logo from "../assets/tailwindLogo.png";
 import ReactQuery_Logo from "../assets/react-query.png";
 import Expressjs_Logo from "../assets/express-js.png";
 import NextJs_Logo from "../assets/nextjs_logo.png";
@@ -57,8 +57,8 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={React_Logo} />
-          <Text className="text" textAlign={"center"}>
-            React{" "}
+          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
+            React.Js
           </Text>
         </Box>
         <Box
@@ -70,7 +70,7 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={Typescript_Logo} />
-          <Text className="text" textAlign={"center"}>
+          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
             TypeScript{" "}
           </Text>
         </Box>
@@ -83,8 +83,8 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={NextJs_Logo} />
-          <Text className="text" textAlign={"center"}>
-            NextJS{" "}
+          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
+            Next.Js
           </Text>
         </Box>
         <Box
@@ -96,8 +96,8 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={Nodejs_Logo} />
-          <Text className="text" textAlign={"center"}>
-            NodeJS{" "}
+          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
+            Node.Js{" "}
           </Text>
         </Box>
         <Box
@@ -109,7 +109,7 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={Mongodb_Logo} />
-          <Text className="text" textAlign={"center"}>
+          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
             MongoDB{" "}
           </Text>
         </Box>
@@ -121,9 +121,9 @@ const Skill = () => {
           border={"4px"}
           css={gradientBorder}
         >
-          <Image boxSize={"100px"} src={Zustand_Logo} />
-          <Text className="text" textAlign={"center"}>
-            Zustand{" "}
+          <Image boxSize={"100px"} src={Tailwind_Logo} />
+          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
+            Tailwind{" "}
           </Text>
         </Box>
         <Box
@@ -148,8 +148,8 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={Expressjs_Logo} />
-          <Text className="text" textAlign={"center"}>
-            ExpressJS{" "}
+          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
+            Express.Js
           </Text>
         </Box>
       </SimpleGrid>
