@@ -57,7 +57,11 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={React_Logo} />
-          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
+          <Text
+            color={"green.400"}
+            textAlign={"center"}
+            fontWeight={"semibold"}
+          >
             React.Js
           </Text>
         </Box>
@@ -70,7 +74,11 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={Typescript_Logo} />
-          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
+          <Text
+            color={"green.400"}
+            textAlign={"center"}
+            fontWeight={"semibold"}
+          >
             TypeScript{" "}
           </Text>
         </Box>
@@ -83,7 +91,11 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={NextJs_Logo} />
-          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
+          <Text
+            color={"green.400"}
+            textAlign={"center"}
+            fontWeight={"semibold"}
+          >
             Next.Js
           </Text>
         </Box>
@@ -96,7 +108,11 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={Nodejs_Logo} />
-          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
+          <Text
+            color={"green.400"}
+            textAlign={"center"}
+            fontWeight={"semibold"}
+          >
             Node.Js{" "}
           </Text>
         </Box>
@@ -109,7 +125,11 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={Mongodb_Logo} />
-          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
+          <Text
+            color={"green.400"}
+            textAlign={"center"}
+            fontWeight={"semibold"}
+          >
             MongoDB{" "}
           </Text>
         </Box>
@@ -122,7 +142,11 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={Tailwind_Logo} />
-          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
+          <Text
+            color={"green.400"}
+            textAlign={"center"}
+            fontWeight={"semibold"}
+          >
             Tailwind{" "}
           </Text>
         </Box>
@@ -135,7 +159,11 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={ReactQuery_Logo} />
-          <Text className="text" textAlign={"center"}>
+          <Text
+            color={"green.400"}
+            textAlign={"center"}
+            fontWeight={"semibold"}
+          >
             ReactQuery{" "}
           </Text>
         </Box>
@@ -148,7 +176,11 @@ const Skill = () => {
           css={gradientBorder}
         >
           <Image boxSize={"100px"} src={Expressjs_Logo} />
-          <Text className="text" textAlign={"center"} fontWeight={"semibold"}>
+          <Text
+            color={"green.400"}
+            textAlign={"center"}
+            fontWeight={"semibold"}
+          >
             Express.Js
           </Text>
         </Box>
