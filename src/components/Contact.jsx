@@ -80,9 +80,9 @@ const Contact = () => {
                   mx={{ base: "auto" }}
                   alignItems="flex-start"
                 >
-                  <IconButton
+                  {/* <IconButton
                     as={"a"}
-                    href="https://www.facebook.com/prantor.azijul/"
+                    href=""
                     target="_blank"
                     aria-label="facebook"
                     variant="ghost"
@@ -91,7 +91,7 @@ const Contact = () => {
                     bg="whiteAlpha.400"
                     _hover={{ bg: "#29acff" }}
                     icon={<MdFacebook size="28px" />}
-                  />
+                  /> */}
                   <IconButton
                     as={"a"}
                     href="https://github.com/Prantor-Hawlader"
