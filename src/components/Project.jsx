@@ -78,17 +78,29 @@ const Project = () => {
               </Text>
             </Box>
 
-            <Box textAlign={{ base: "center" }}>
+            <Box display={"block"} textAlign={{ base: "center" }}>
               <Button
                 color={"whiteAlpha.900"}
                 _hover={{ bgGradient: "linear(to-l, #29acff, green.200)" }}
                 as={"a"}
                 target="_blank"
                 marginTop={"2rem"}
+                mr={2}
                 href={item.link}
                 backgroundColor="black"
               >
                 Let&apos;s Visit
+              </Button>
+              <Button
+                color={"green.200"}
+                _hover={{ color: "green.400" }}
+                as={"a"}
+                target="_blank"
+                marginTop={"2rem"}
+                href={item.sourceCode}
+                backgroundColor="black"
+              >
+                Source Code
               </Button>
             </Box>
           </Box>
