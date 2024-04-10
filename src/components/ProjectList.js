@@ -13,17 +13,9 @@ const items = [
     link: "https://mychat-app-19aq.onrender.com/",
     sourceCode: "https://github.com/Prantor-Hawlader/Mychat-app",
   },
+
   {
     id: 2,
-    img: Project4,
-    title: "E-commerce store",
-    details:
-      "Here is the main e-commerce store which is controlled by the admin dashboard. I used Next.js, Typescript, Stripe, and Tailwind to build this website",
-    link: "https://future-commerce-store.vercel.app/",
-    sourceCode: "https://github.com/Prantor-Hawlader/Future-Commerce-store",
-  },
-  {
-    id: 3,
     img: Project1,
     title: "Game Hub",
     details:
@@ -32,13 +24,22 @@ const items = [
     sourceCode: "https://github.com/Prantor-Hawlader/Gamer-World",
   },
   {
-    id: 4,
+    id: 3,
     img: Project3,
     title: "E-commerce admin dashboard",
     details:
       "Using this dashboard we can create store, products, categories, billboards, and so on. For building this e-commerce admin dashboard, I used mainly Next.js, Typescript, Prisma, Tailwind, and MySQL. I also used Planetscale for the database and Cloudinary for image upload.",
     link: "https://future-commerce-admin.vercel.app/",
     sourceCode: "https://github.com/Prantor-Hawlader/Future-Commerce-admin",
+  },
+  {
+    id: 4,
+    img: Project4,
+    title: "E-commerce store",
+    details:
+      "Here is the main e-commerce store which is controlled by the admin dashboard. I used Next.js, Typescript, Stripe, and Tailwind to build this website",
+    link: "https://future-commerce-store.vercel.app/",
+    sourceCode: "https://github.com/Prantor-Hawlader/Future-Commerce-store",
   },
 
   {
