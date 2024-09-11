@@ -3,9 +3,29 @@ import Project2 from "../assets/Project2.png";
 import Project3 from "../assets/adminWebsite.png";
 import Project4 from "../assets/storeWebsite.png";
 import Project5 from "../assets/mychatAppSS.png";
+import Project6 from "../assets/prantor-collection-management_ss.png";
 const items = [
   {
     id: 1,
+    img: Project6,
+    title: "Personal Collection Management",
+    details:
+      "This is a personal collection management web application where the user can create collections. When creating a collection, the user can add multiple custom fields for his/her collection. I built this website using mainly Next.js, NextUI, PostgreSQL and Neon ",
+    link: "https://prantor-collection-management.vercel.app",
+    sourceCode: "https://github.com/Prantor-Hawlader/personal-collection-management",
+  },
+  {
+    id: 2,
+    img: Project3,
+    title: "E-commerce admin dashboard",
+    details:
+      "Using this dashboard we can create store, products, categories, billboards, and so on. For building this e-commerce admin dashboard, I used mainly Next.js, Typescript, Prisma, Tailwind, and MySQL. I also used Planetscale for the database and Cloudinary for image upload.",
+    link: "https://future-commerce-admin.vercel.app/",
+    sourceCode: "https://github.com/Prantor-Hawlader/Future-Commerce-admin",
+  },
+
+  {
+    id: 4,
     img: Project5,
     title: "Chat Application",
     details:
@@ -15,7 +35,7 @@ const items = [
   },
 
   {
-    id: 2,
+    id: 3,
     img: Project1,
     title: "Game Hub",
     details:
@@ -23,17 +43,9 @@ const items = [
     link: "https://prantor-gamer-world.vercel.app/",
     sourceCode: "https://github.com/Prantor-Hawlader/Gamer-World",
   },
+
   {
-    id: 3,
-    img: Project3,
-    title: "E-commerce admin dashboard",
-    details:
-      "Using this dashboard we can create store, products, categories, billboards, and so on. For building this e-commerce admin dashboard, I used mainly Next.js, Typescript, Prisma, Tailwind, and MySQL. I also used Planetscale for the database and Cloudinary for image upload.",
-    link: "https://future-commerce-admin.vercel.app/",
-    sourceCode: "https://github.com/Prantor-Hawlader/Future-Commerce-admin",
-  },
-  {
-    id: 4,
+    id: 5,
     img: Project4,
     title: "E-commerce store",
     details:
@@ -43,7 +55,7 @@ const items = [
   },
 
   {
-    id: 5,
+    id: 6,
     img: Project2,
     title: "Developer Hub",
     details:
