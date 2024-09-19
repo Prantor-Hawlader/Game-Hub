@@ -4,6 +4,7 @@ import Project3 from "../assets/adminWebsite.png";
 import Project4 from "../assets/storeWebsite.png";
 import Project5 from "../assets/mychatAppSS.png";
 import Project6 from "../assets/prantor-collection-management_ss.png";
+import Project7 from "../assets/Finder_ss.png"
 const items = [
   {
     id: 1,
@@ -16,6 +17,25 @@ const items = [
   },
   {
     id: 2,
+    img: Project7,
+    title: "Missing Person Detection Web Appliction",
+    details:
+      "Developed a web application designed to help people find missing individuals using Artificial Intelligence. The platform allows users to post details about missing persons, including images, and leverages real-time image recognition to identify potential matches.",
+    link: "https://missing-person-detection-application.vercel.app/",
+    sourceCode: "https://github.com/Coder-Boys/missing-person-detection-application",
+  },
+
+  {
+    id: 3,
+    img: Project5,
+    title: "Chat Application",
+    details:
+      "Developed a real-time chat web application enabling users to connect and communicate. Utilized the MERN stack for a robust and scalable architecture. Implemented JWT for secure authentication and Socket.io for facilitating real-time messaging functionalities.",
+    link: "https://mychat-app-bqtu.onrender.com/",
+    sourceCode: "https://github.com/Prantor-Hawlader/Mychat-app",
+  },
+  {
+    id: 4,
     img: Project3,
     title: "E-commerce admin dashboard",
     details:
@@ -24,18 +44,10 @@ const items = [
     sourceCode: "https://github.com/Prantor-Hawlader/Future-Commerce-admin",
   },
 
-  {
-    id: 4,
-    img: Project5,
-    title: "Chat Application",
-    details:
-      "Developed a real-time chat web application enabling users to connect and communicate. Utilized the MERN stack for a robust and scalable architecture. Implemented JWT for secure authentication and Socket.io for facilitating real-time messaging functionalities.",
-    link: "https://mychat-app-19aq.onrender.com/",
-    sourceCode: "https://github.com/Prantor-Hawlader/Mychat-app",
-  },
+
 
   {
-    id: 3,
+    id: 5,
     img: Project1,
     title: "Game Hub",
     details:
@@ -45,7 +57,7 @@ const items = [
   },
 
   {
-    id: 5,
+    id: 6,
     img: Project4,
     title: "E-commerce store",
     details:
@@ -55,7 +67,7 @@ const items = [
   },
 
   {
-    id: 6,
+    id: 7,
     img: Project2,
     title: "Developer Hub",
     details:
