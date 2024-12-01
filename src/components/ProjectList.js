@@ -5,7 +5,19 @@ import Project4 from "../assets/storeWebsite.png";
 import Project5 from "../assets/mychatAppSS.png";
 import Project6 from "../assets/prantor-collection-management_ss.png";
 import Project7 from "../assets/Finder_ss.png"
+import Project8 from "../assets/kamrulWebsite.png"
 const items = [
+
+  {
+    id: 0,
+    img: Project8,
+    title: "Cyber Security Specialist Web App",
+    details:
+      "Developed a personal web app with features like blog management, bug bounty program details, admin-controlled posts, a pentesting checklist, and integration with the CVSS v3.1 Base Score Calculator. Using a modern tech stack including Next.js, React, TailwindCSS, Prisma, PostgreSQL (Neon), NextAuth, and Cloudinary",
+    link: "https://www.kamroot.com/",
+    sourceCode: "https://github.com/Prantor-Hawlader/Cyber-Security-Specialist",
+  },
+
   {
     id: 1,
     img: Project6,
